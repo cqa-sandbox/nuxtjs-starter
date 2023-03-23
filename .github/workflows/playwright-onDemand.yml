@@ -35,6 +35,8 @@ jobs:
       run: npm ci
     - name: Install Playwright
       run: npx playwright install --with-deps
+    - name: Work around for node to build properly
+      run: export NODE_OPTIONS=--openssl-legacy-provider
     - name: Build production build
       run: npm run build
     - name: Run your tests
