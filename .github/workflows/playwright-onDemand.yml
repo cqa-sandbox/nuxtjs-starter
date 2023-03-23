@@ -38,7 +38,7 @@ jobs:
     - name: Work around for node to build properly
       run: export NODE_OPTIONS=--openssl-legacy-provider
     - name: Build production build
-      run: npm run build
+      run: npm run generate
     - name: Run your tests
       run: npm run test
     - name: Get current date
